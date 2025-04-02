@@ -45,7 +45,7 @@ entry.pack(side="left", padx=10, pady=10, expand=True, fill="x")
 send_button = tk.Button(bottom_frame, text="Send", font=("Arial", 12), bg="#4a0072", fg="white", padx=10)
 send_button.pack(side="right", padx=10, pady=10)
 
-# Placeholder for the previous chatbot code
+# Tokenization and processing functions
 def tokenize(sentence):
     return sentence.split()
 
@@ -96,7 +96,7 @@ class NeuralNet:
         pass
 
     def forward(self, x):
-        return [0.5] * len(tags)
+        return [random.random() for _ in range(len(tags))]  # Simulating random predictions
 
 # Chatbot interaction
 def respond():
@@ -104,14 +104,15 @@ def respond():
     if sentence.lower() == "quit":
         root.quit()
         return
+
     tokenized_sentence = tokenize(sentence)
     bag = bag_of_words(tokenized_sentence, all_words)
-
+    
     output = model.forward(bag)
-    predicted = max(output)
-    tag = tags[output.index(predicted)]
-
-    response = ""
+    predicted_index = output.index(max(output))  # Find the highest probability index
+    tag = tags[predicted_index]
+    
+    response = "Sorry, I don't understand."
     for intent in intents['intents']:
         if intent['tag'] == tag:
             response = random.choice(intent['responses'])

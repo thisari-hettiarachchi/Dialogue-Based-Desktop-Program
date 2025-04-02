@@ -1,32 +1,22 @@
 {
     "intents": [
-      {
-        "tag": "programming",
-        "patterns": [
-          "What is Python?",
-          "How do I write a Python function?",
-          "What is object-oriented programming?",
-          "Explain a class in programming",
-          "What is a loop in programming?",
-          "How do I use a for loop in Python?",
-          "What is recursion?",
-          "Explain a variable in programming",
-          "What is an algorithm?",
-          "How do I debug a program?"
-        ],
-        "responses": [
-          "Python is a popular programming language known for its simplicity and readability.",
-          "A Python function is defined using the `def` keyword followed by the function name and parameters.",
-          "Object-oriented programming is a paradigm based on the concept of 'objects', which are instances of classes.",
-          "A class is a blueprint for creating objects, defining their properties and behaviors.",
-          "A loop is a programming structure used to repeat a block of code multiple times.",
-          "In Python, a `for` loop is used to iterate over a sequence (like a list, tuple, or string). Example: `for i in range(5):`.",
-          "Recursion is a technique where a function calls itself in order to solve a problem.",
-          "A variable is a storage location in a program that holds data, which can be modified during execution.",
-          "An algorithm is a step-by-step procedure or formula for solving a problem.",
-          "To debug a program, you can use debugging tools, print statements, or IDE features to trace and fix errors."
-        ]
-      }
+        {
+            "tag": "python_definition",
+            "patterns": [
+                "What is Python?"
+            ],
+            "responses": [
+                "Python is a popular programming language known for its simplicity and readability."
+            ]
+        },
+        {
+            "tag": "python_function",
+            "patterns": [
+                "How do I write a Python function?"
+            ],
+            "responses": [
+                "A Python function is defined using the `def` keyword followed by the function name and parameters."
+            ]
+        }
     ]
-  }
-  
+}
