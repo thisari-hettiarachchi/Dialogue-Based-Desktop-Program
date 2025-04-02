@@ -1,9 +1,0 @@
-{
-  "main": "public/electron.js",
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "electron-start": "electron .",
-    "electron-build": "electron-builder"
-  }
-}
