@@ -1,21 +1,66 @@
 {
     "intents": [
         {
-            "tag": "python_definition",
+            "tag": "computer program",
             "patterns": [
-                "What is Python?"
+                "What is computer program?"
             ],
             "responses": [
-                "Python is a popular programming language known for its simplicity and readability."
+                "A computer program is just a set of instructions that tells a computer what to do."
             ]
         },
         {
-            "tag": "python_function",
+            "tag": "programming",
             "patterns": [
-                "How do I write a Python function?"
+                "What is programming?"
             ],
             "responses": [
-                "A Python function is defined using the `def` keyword followed by the function name and parameters."
+                "Programming is the preparation of a sequence of instructions (a program) for a given problem (algorithm) that details exactly how a computer must proceed to solve a problem."
+            ]
+        },
+        {
+            "tag": "Variable",
+            "patterns": [
+                "What is a variable in programming?"
+            ],
+            "responses": [
+                "Variables are fundamental elements in programming. A variable is essentially a container that stores data, and its value can be changed during the execution of a program."
+            ]
+        },
+        {
+            "tag": "data types",
+            "patterns": [
+                "What are data types?"
+            ],
+            "responses": [
+                "In programming, data types are the types of values that variables can store. Every data type comes with associated properties, which are essential to know which mathematical, relational, or logical operations can be performed."
+            ]
+        },
+        {
+            "tag": "generations of programming languages",
+            "patterns": [
+                "What are the different generations of programming languages?"
+            ],
+            "responses": [
+                "1. First Generation (1GL) – Machine language (binary code)\n 2. Second Generation (2GL) – Assembly language (uses mnemonics)\n 3. Third Generation (3GL) – High-level languages (C, Java, Python)\n 4. Fourth Generation (4GL) – Domain-specific languages (SQL, MATLAB).\n 5. Fifth Generation (5GL) – AI and logical reasoning languages (Prolog, Lisp)."
+            ]
+        },
+        {
+            "tag": "basic data types",
+            "patterns": [
+                "What are the basic data types in programming?"
+            ],
+            "responses": [
+                "Integer (int) – Whole numbers (e.g., 10, -5).\n Float (float/double) – Decimal numbers (e.g., 3.14, -2.5).\n Character (char) – Single letter (e.g., ‘A’, ‘z’).\n Boolean (bool) – True or false.\n String – Sequence of characters (e.g., “Hello”)."
+            ]
+        },
+        {
+            "tag": "algorithm",
+            "patterns": [
+                "What is an algorithm?"
+            ],
+            "responses": [
+                "An algorithm is a finite sequence of well-defined steps or instructions that solve a problem or perform a task. It provides a clear path from the input to the output."
             ]
         }
     ]
