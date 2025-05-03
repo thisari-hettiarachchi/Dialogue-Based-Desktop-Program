@@ -33,7 +33,7 @@
                 "What are data types?"
             ],
             "responses": [
-                "In programming, data types are the types of values that variables can store. Every data type comes with associated properties, which are essential to know which mathematical, relational, or logical operations can be performed."
+                "Data types are the types of values that variables can store. Every data type comes with associated properties, which are essential to know which mathematical, relational, or logical operations can be performed."
             ]
         },
         {

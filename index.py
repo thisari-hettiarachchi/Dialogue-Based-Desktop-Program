@@ -56,11 +56,11 @@ def respond():
     entry.delete(0, tk.END)
     
     user_frame = tk.Frame(scrollable_frame, bg="#ffffff")
-    user_frame.pack(anchor="e", pady=2, padx=10)  
-    
-    tk.Label(user_frame, image=user_icon, bg="#ffffff").pack(side="right", padx=2) 
-    tk.Label(user_frame, text=sentence, font=("Arial", 10), fg="blue", bg="#f0f0f0", padx=6, pady=5).pack(side="right")
-    
+    user_frame.pack(anchor="e", pady=2, padx=(2, 20))  
+
+    tk.Label(user_frame, image=user_icon, bg="#ffffff").pack(side="right", padx=(2, 2)) 
+    tk.Label(user_frame, text=sentence, font=("Arial", 10), fg="blue", bg="#f0f0f0", padx=4, pady=4).pack(side="right")
+
     patterns = {p: intent for intent in intents['intents'] for p in intent['patterns']}
     best_match, confidence = process.extractOne(sentence, patterns.keys(), score_cutoff=60)  
     
@@ -74,7 +74,8 @@ def respond():
     bot_frame.pack(anchor="w", pady=2, padx=5)
     
     tk.Label(bot_frame, image=bot_icon, bg="#ffffff").pack(side="left")
-    tk.Label(bot_frame, text=response, font=("Arial", 10), fg="green", bg="#e0f7fa", padx=8, pady=5).pack(side="left", fill="x")
+    tk.Label(bot_frame, text=response, font=("Arial", 10), fg="green", bg="#e0f7fa", padx=8, pady=5, wraplength=1350, justify="left").pack(side="left")
+
     
     canvas.update_idletasks()
     canvas.yview_moveto(1)
@@ -82,3 +83,5 @@ def respond():
 
 send_button.config(command=respond)
 root.mainloop()
+entry.bind("<Return>", lambda event: respond())
+
